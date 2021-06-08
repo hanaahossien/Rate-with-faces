@@ -1,0 +1,133 @@
+body {
+  direction: rtl;
+  font-family: 'Cairo';
+  background-color: #f9f9f9;
+}
+
+@font-face {
+  font-family: 'Cairo';
+  src: url(../webfonts/Cairo-Regular.ttf);
+}
+
+.banner {
+  background-image: url(../../images/bg.jpg);
+  /* background: content-box; */
+  background-size: cover;
+  min-height: 300px;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.shadow {
+  background-color: #ffffff;
+  line-height: 35px;
+  -webkit-box-shadow: 1.5px 2.598px 10px 0px rgba(0, 0, 0, 0.118);
+  box-shadow: 1.5px 2.598px 10px 0px rgba(0, 0, 0, 0.118);
+}
+
+.qut {
+  font-size: 18px;
+}
+
+.sad {
+  background-image: url(../../images/1.png);
+  background-repeat: no-repeat;
+}
+
+.normal {
+  background-image: url(../../images/2.png);
+  background-repeat: no-repeat;
+}
+
+.good {
+  background-image: url(../../images/3.png);
+  background-repeat: no-repeat;
+}
+
+.habby {
+  background-image: url(../../images/4.png);
+  background-repeat: no-repeat;
+}
+
+label {
+  width: 62px;
+  height: 82px;
+  cursor: pointer;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+  filter: grayscale(100%);
+  position: relative;
+}
+
+.q1  input:checked+label   {
+  filter: none;
+  opacity: 1;
+}
+
+.q1 input:checked+.sad   {
+  background-image: url(../../images/c1.png);
+  background-repeat: no-repeat;
+  color: red !important;
+}
+
+.q1 input:checked+.normal {
+  background-image: url(../../images/c2.png);
+  background-repeat: no-repeat;
+}
+
+.q1 input:checked+.good {
+  background-image: url(../../images/c3.png);
+  background-repeat: no-repeat;
+}
+
+.q1 input:checked+.habby{
+  background-image: url(../../images/c4.png);
+  background-repeat: no-repeat;
+}
+
+input:checked+.sad::after {
+  color: red !important;
+}
+
+input:checked+.normal::after {
+  color: #f9851f !important;
+}
+
+input:checked+.good::after {
+  color: #fdca03 !important;
+}
+
+input:checked+.habby::after {
+  color: #41d451 !important;
+}
+
+input {
+  appearance: none;
+}
+
+label.form-check-label:after {
+  position: absolute;
+  bottom: -14px;
+  text-align: center;
+  right: 15px;
+  font-size: 16px;
+  color: #c3ccd6;
+  font-weight: 600;
+}
+
+label.form-check-label.sad:after {
+  content: "حزين";
+}
+
+label.form-check-label.normal:after {
+  content: "عادي";
+}
+
+label.form-check-label.good:after {
+  content: "جيدة";
+}
+
+label.form-check-label.habby:after {
+  content: "ممتاز";
+} 
